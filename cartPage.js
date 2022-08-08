@@ -8,9 +8,9 @@ const getData= async(url)=>{
     }
 }
   let kite =document.getElementById("btn2");
- kite.addEventListener("click",function(){
-     window.location.href="checkoutPage.html";
- })
+ //kite.addEventListener("click",function(){
+ //    window.location.href="checkoutPage.html";
+ //})
 // get the id from local Storage
 let checkedProductID = localStorage.getItem("checked_products") ? JSON.parse(localStorage.getItem("checked_products")) : "";
 
@@ -68,7 +68,7 @@ const displayData = (checkedData) =>{
         totalPriceElement.innerText = priceElement.innerText*quantity.value;
         grandPrice+=Number(totalPriceElement.innerText);
 
-        document.getElementById("subtotalprice").textContent=grandPrice;
+        document.getElementById("subtotalprice").innerText=grandPrice;
         document.getElementById("grandTotalprice").textContent=grandPrice;
 }
 
